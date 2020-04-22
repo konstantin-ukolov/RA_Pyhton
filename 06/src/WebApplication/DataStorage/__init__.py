@@ -1,0 +1,7 @@
+from DataStorage.DataStorage import DataStorage
+from DataStorage.MemoryDataStorage import MemoryDataStorage
+from DataStorage.MongoDataStorage import MongoDataStorage
+from DataStorage.PostgresDataStorage import PostgresDataStorage
+from DataStorage.SqliteDataStorage import SqliteDataStorage
+
+from DataStorage.DataStorageFactory import DataStorageFactory

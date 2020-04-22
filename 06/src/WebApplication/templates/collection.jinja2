@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <table>
+        {% for entry in collection %}
+        <tr>
+            <td>{{ entry.original }}</td>
+            <td>{{ entry.translation }}</td>
+            <td>{{ entry.transcription }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/collections/{{ name }}"
+          method="post" accept-charset="utf-8"
+          enctype="application/x-www-form-urlencoded">
+
+    <label for="original">original</label>
+    <input id="original" name="original" type="text" value="" autofocus/>
+
+    <label for="translation">translation</label>
+    <input id="translation" name="translation" type="text" value=""/>
+
+    <label for="transcription">transcription</label>
+    <input id="transcription" name="transcription" type="text" value=""/>
+
+    <input type="submit" value="add"/>
+</form>
+</body>
+</html>`
